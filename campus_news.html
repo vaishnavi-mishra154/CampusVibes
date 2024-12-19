@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Vibes - Campus News & Events</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #353535;
+            --accent-color: #4a4a4a;
+            --text-color: #f4f4f4;
+            --hover-color: rgba(255, 255, 255, 0.8);
+            --button-bg: rgba(255, 255, 255, 0.2);
+            --button-hover-bg: rgba(255, 255, 255, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--primary-color);
+            background-image: url('images/fest2.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            padding: 2rem 0;
+        }
+
+        .page-container {
+            max-width: 1200px;
+            width: 100%;
+            padding: 2rem;
+        }
+
+        .page-header h1 {
+            font-family: 'Cormorant', serif;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .content-card {
+            background-color: rgb(162, 2, 2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .content-card:hover {
+            transform: scale(1.05);
+            background-color: rgb(71, 6, 6);
+        }
+
+        .content-card h2 {
+            font-family: 'Cormorant', serif;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .content-card p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: auto; /* Push the button to the bottom */
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: rgb(95, 16, 16);
+            color: var(--text-color);
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            border: none;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            background-color:  rgb(255, 255, 255);
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <h1>Campus News & Events</h1>
+        </header>
+        <div class="content-grid">
+            <div class="content-card">
+                <h2>Upcoming Events</h2>
+                <p>Stay updated on workshops, guest lectures, and more.</p>
+                <a href="#" class="btn">View Events</a>
+            </div>
+            <div class="content-card">
+                <h2>Student Achievements</h2>
+                <p>Celebrate the milestones and successes of your peers.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="content-card">
+                <h2>Club Activities</h2>
+                <p>Discover activities hosted by student clubs and organizations.</p>
+                <a href="#" class="btn">Explore Clubs</a>
+            </div>
+            <div class="content-card">
+                <h2>Weekly Highlights</h2>
+                <p>Catch up on key happenings from around the campus.</p>
+                <a href="#" class="btn">Read Highlights</a>
+            </div>
+        </div>
+    </div>
+    <!-- Back to Home Button -->
+<a href="home_page.html" class="back-to-home">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="home-icon">
+        <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
+    </svg>
+    Home
+</a>
+
+<style>
+    .back-to-home {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        background-color:  rgb(95, 16, 16);
+        color: var(--text-color);
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .back-to-home:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+        color: var(--primary-color);
+    }
+
+    .home-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 0.5rem;
+    }
+</style>
+
+</body>
+</html>
