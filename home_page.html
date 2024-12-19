@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Vibes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #353535;
+            --accent-color: #4a4a4a;
+            --text-color: #f4f4f4;
+            --hover-color: #6a6a6a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: rgba(31, 50, 1, 0.819); /*behind widgets*/
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            background-image: url('images/background4.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero::before { /*backgound main*/
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.116);
+        }
+
+        .hero-content {/*campus vibes center colour*/
+            position: relative;
+            z-index: 10;
+            color: var(--text-color);
+            max-width: 800px;
+            padding: 30px;
+            background-color: rgba(58, 36, 1, 0.844);
+            border-radius: 15px;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant', serif;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .cta-btn, .section-link { /*login buttons colour*/
+            display: inline-block;
+            padding: 12px 24px;
+            background-color:  rgba(58, 36, 1, 0.844);
+            border: 2px solid var(--text-color);
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .cta-btn:hover, .section-link:hover {
+            background-color: var(--text-color);
+            color: var(--primary-color);
+        }
+
+        .featured-sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 50px;
+        }
+
+        .featured-section { /*widgets*/
+            background-color: rgb(58, 36, 1);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .featured-section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            background-color: rgb(31, 20, 1);
+        }
+
+        .featured-section i { /*icons colour*/
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .featured-section h3 {
+            font-family: 'Cormorant', serif;
+            margin-bottom: 10px;
+        }
+
+        .featured-section a { /*widgets small buttons*/
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: rgb(53, 85, 1);
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .featured-section a:hover {
+            background-color: var(--hover-color);
+        }
+
+        footer { /*footer colour*/
+            background-color: rgba(36, 22, 1, 0.844);
+            color: var(--text-color);
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+
+        footer a { /*footer bottom text colour*/
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--hover-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Campus Vibes</h1>
+                <p class="hero-description">
+                    Your ultimate student companion, bringing together academics, lifestyle, 
+                    wellness, and entertainment in one vibrant platform.
+                </p>
+
+                <div class="cta-buttons">
+                    <a href="login.html" class="cta-btn">Login</a>
+                    <a href="signup.html" class="cta-btn">Sign Up</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="featured-sections">
+            <div class="featured-section">
+                <i class="fas fa-book-open"></i>
+                <h3>Academics</h3>
+                <p>Boost your learning with productivity tips and study strategies.</p>
+                <a href="academics.html">Learn More</a>
+            </div>
+
+            <div class="featured-section">
+                <i class="fas fa-utensils"></i>
+                <h3>Food & Lifestyle</h3>
+                <p>Budget-friendly recipes and fitness tips for busy students.</p>
+                <a href="food_lifestyle.html">Explore</a>
+            </div>
+
+            <div class="featured-section">
+                <i class="fas fa-heart"></i>
+                <h3>Mental Health</h3>
+                <p>Resources and support for student wellness and mindfulness.</p>
+                <a href="mental_health.html">Find Out More</a>
+            </div>
+
+            <div class="featured-section">
+                <i class="fas fa-newspaper"></i>
+                <h3>Campus News</h3>
+                <p>Stay updated with the latest events and announcements on campus.</p>
+                <a href="campus_news.html">Check News</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Campus Vibes. All Rights Reserved.</p>
+        <p>
+            <a href="about.html">About Us</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy.html">Privacy Policy</a>
+        </p>
+    </footer>
+</body>
+</html>
